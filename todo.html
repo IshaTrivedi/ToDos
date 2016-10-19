@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>To Do List AngularJS</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+
+<body ng-controller="todoCtrl" ng-init="init()">
+    <div>
+        <center>
+            <form ng-submit="submit()">
+                <h1>todos</h1>
+                <div>
+                    <input type="checkbox" id="chk" ng-model="chkall" ng-click="chkAllfn()">
+                    <input type="text" name="todo" placeholder="What needs to be done?" ng-model="text" />
+                    <button style="display: none" ng-click="showdata()">Add</button>
+                </div>
+                <!--  for adding list items -->
+                <div class="settext">
+                    <ul id="todo">
+                        <li ng-repeat="mylist in list" ng-dblclick="edit()">
+                            <div class="view" ng-keyup="editTodo()">
+                                <input type="checkbox" ng-model="mylist.done">
+                                <!-- cancel selected items -->
+                                <pre contenteditable="true" class="done-{{mylist.done}}">{{mylist.name}}</pre>
+                                <button type="button" class="delete" ng-click="delete($index)">X</button>
+                            </div>
+                            <input class="edit" type="text" ng-model="mylist.text" ng-keyup="editOnEnter(mylist)" />
+                        </li>
+                        <hr/>
+                    </ul>
+                </div>
+                <!-- for footer count -->
+                <div class="footer" ng-show="data">
+                    <span>{{ leftitems() }} items left</span>
+                    <span class="btn">
+		  			<button ng-class="{'active' : show == 'All' }" ng-click="show == 'All'">All</button>
+		  			<button ng-class="{'active' : show == 'Active' }" ng-click="show == 'Active'">Active</button>
+		  			<button ng-class="{'active' : show == 'Completed' }" ng-click="show == 'Completed'">Completed</button>
+		  		</span>
+                    <span class="right"><a href="" ng-click="completed($index)" style="color: grey">Clear completed</span>
+                </div>
+            </form>
+        </center>
+    </div>
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="todo.js"></script>
+    <!-- <script type="text/javascript" src="todo.json"></script> -->
+</body>
+
+</html>

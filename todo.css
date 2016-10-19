@@ -1,0 +1,141 @@
+body {
+	background-color: #E8E6E6;
+}
+h1 {
+	color: #BA5656;
+	font-size: 70px;
+	opacity: 0.2;
+}
+input {
+	width: 450px; 
+	height: 40px;
+}
+
+#chk {
+	margin-top: 16px;
+	margin-left: 6px;
+}
+
+/*pre[contenteditable="true"] {
+	display: block;
+	box-shadow: 10px 10px 5px #888888;
+}
+*/
+input, input[placeholder]{
+	/*font-weight:bold;*/
+    /*color:red;*/
+    text-align:center;
+    font-size: 15px;
+     font-family: "Times New Roman";
+     font: italic 16px/40px Georgia, serif;
+}
+ul {
+	width: 0.1%;
+	margin-right: 490px;
+	/*margin: auto;*/
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+li  {
+    /*margin-right: 600px;*/
+    display: inline-block;
+    background-color: white;
+    text-align: left;
+    border-bottom: 1px lightgray solid;
+    /*padding-left: 50px;*/
+    width: 454px; 
+	height: 40px;
+}
+pre {
+	display: inline-block;
+	padding-left: 50px;
+	width: 190px;
+}
+
+.footer {
+	display: inline-block;
+    background-color: white;
+    width: 454px; 
+	height: 40px;
+	margin-top: -20px;
+}
+.delete {
+	/*position: absolute;*/ 
+	background-color: transparent;
+	height: 20px;
+  width: 40px;
+  border: none;
+  margin-left: 170px;
+	/*padding-left: 280px;
+	background-color: white;*/
+}
+.settext {
+	margin-top: -14px;
+}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.btn {
+  background-color: transparent;
+  margin-left: -100px;
+  display: inline-block;
+  border: none;
+  float: left;
+  position: absolute;
+  color: grey;
+}
+
+.btn button {
+	background-color: transparent;
+	color: grey;
+}
+.btn button:hover
+{
+	border-color :#BA5656;
+}
+
+input[type=checkbox] {
+			width: 20px;
+			height: 20px;
+			background: red;
+			border: 1px solid red;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+			border-radius: 10px;
+			float: left;
+			position: absolute;
+}
+
+span {
+	position: absolute;
+	float: left;
+	margin-left: -220px;
+	color: grey;
+}
+
+.right {
+	float: right;
+	margin-left: 120px;
+}
+
+#todo li .edit {
+    display: none;
+}
+#todo li.editing {
+	border-bottom: 1px solid #778899;
+}
+
+#todo li.editing .view {
+	display: none;
+}
+#todo li.editing .edit {
+	display: block;
+	width: 444px;
+	padding: 13px 15px 14px 20px;
+	margin: 0;
+}
